@@ -13,6 +13,7 @@ async def genStrSession() -> None:  # pylint: disable=missing-function-docstring
             "antikozhi",
             api_id=int(os.environ.get("APP_ID") or input("Enter Telegram APP ID: ")),
             api_hash=os.environ.get("API_HASH") or input("Enter Telegram API HASH: ")
+            device_model="AntiKozhi Ver 1.0.1"
     ) as antikozhi:
         print("\nprocessing...")
         await antikozhi.send_message(
